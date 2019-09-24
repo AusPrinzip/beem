@@ -205,7 +205,7 @@ class Discussions_by_trending(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_trending(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_trending(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_trending(discussion_query)
         super(Discussions_by_trending, self).__init__(
@@ -241,7 +241,7 @@ class Discussions_by_author_before_date(list):
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
             discussion_query = {"author": author, "start_permlink": start_permlink, "before_date": before_date, "limit": limit}
-            posts = self.steem.rpc.get_discussions_by_author_before_date(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_author_before_date(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_author_before_date(author, start_permlink, before_date, limit)
         super(Discussions_by_author_before_date, self).__init__(
@@ -271,7 +271,7 @@ class Comment_discussions_by_payout(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_comment_discussions_by_payout(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_comment_discussions_by_payout(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_comment_discussions_by_payout(discussion_query)
         super(Comment_discussions_by_payout, self).__init__(
@@ -301,7 +301,7 @@ class Post_discussions_by_payout(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_post_discussions_by_payout(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_post_discussions_by_payout(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_post_discussions_by_payout(discussion_query)
         super(Post_discussions_by_payout, self).__init__(
@@ -331,7 +331,7 @@ class Discussions_by_created(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_created(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_created(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_created(discussion_query)
         super(Discussions_by_created, self).__init__(
@@ -361,7 +361,7 @@ class Discussions_by_active(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_active(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_active(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_active(discussion_query)
         super(Discussions_by_active, self).__init__(
@@ -392,7 +392,7 @@ class Discussions_by_cashout(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_cashout(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_cashout(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_cashout(discussion_query)
         super(Discussions_by_cashout, self).__init__(
@@ -422,7 +422,7 @@ class Discussions_by_votes(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_votes(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_votes(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_votes(discussion_query)
         super(Discussions_by_votes, self).__init__(
@@ -452,7 +452,7 @@ class Discussions_by_children(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_children(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_children(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_children(discussion_query)
         super(Discussions_by_children, self).__init__(
@@ -482,7 +482,7 @@ class Discussions_by_hot(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_hot(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_hot(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_hot(discussion_query)
         super(Discussions_by_hot, self).__init__(
@@ -512,7 +512,7 @@ class Discussions_by_feed(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_feed(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_feed(discussion_query, api="tags")
         else:
             # limit = discussion_query["limit"]
             # account = discussion_query["tag"]
@@ -548,7 +548,7 @@ class Discussions_by_blog(list):
         if self.steem.rpc.get_use_appbase():
             posts = self.steem.rpc.get_discussions_by_blog(discussion_query, api="tags")
             if 'discussions' in posts:
-                posts = posts['discussions']  # inconsistent format across node types
+                posts = posts  # inconsistent format across node types
         else:
             # limit = discussion_query["limit"]
             # account = discussion_query["tag"]
@@ -584,7 +584,7 @@ class Discussions_by_comments(list):
         if self.steem.rpc.get_use_appbase():
             posts = self.steem.rpc.get_discussions_by_comments(discussion_query, api="tags")
             if 'discussions' in posts:
-                posts = posts['discussions']  # inconsistent format across node types
+                posts = posts  # inconsistent format across node types
         else:
             posts = self.steem.rpc.get_discussions_by_comments(discussion_query)
         super(Discussions_by_comments, self).__init__(
@@ -614,7 +614,7 @@ class Discussions_by_promoted(list):
         self.steem = steem_instance or shared_steem_instance()
         self.steem.rpc.set_next_node_on_empty_reply(self.steem.rpc.get_use_appbase())
         if self.steem.rpc.get_use_appbase():
-            posts = self.steem.rpc.get_discussions_by_promoted(discussion_query, api="tags")['discussions']
+            posts = self.steem.rpc.get_discussions_by_promoted(discussion_query, api="tags")
         else:
             posts = self.steem.rpc.get_discussions_by_promoted(discussion_query)
         super(Discussions_by_promoted, self).__init__(
@@ -646,7 +646,7 @@ class Replies_by_last_update(list):
         if self.steem.rpc.get_use_appbase():
             posts = self.steem.rpc.get_replies_by_last_update(discussion_query, api="tags")
             if 'discussions' in posts:
-                posts = posts['discussions']
+                posts = posts
         else:
             posts = self.steem.rpc.get_replies_by_last_update(discussion_query["start_author"], discussion_query["start_permlink"], discussion_query["limit"])
 
